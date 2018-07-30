@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/5Sigma/celerity"
-	"github.com/5Sigma/celerity-examples-chat/models"
+	"github.com/5Sigma/celerity-example-chat/models"
 	"github.com/5Sigma/celerity/middleware"
 	"github.com/jinzhu/gorm"
 	//GORM SQLITE
@@ -22,7 +22,7 @@ type SocketEvent struct {
 
 // Setup sets up all endpoints and middleware for the server
 func Setup() *celerity.Server {
-	db, _ := gorm.Open("sqlite3", "/tmp/data.sqlite3")
+	db, _ := gorm.Open("sqlite3", "./data.sqlite3")
 	db.LogMode(true)
 
 	db.AutoMigrate(

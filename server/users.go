@@ -4,7 +4,7 @@ import (
 	"errors"
 
 	"github.com/5Sigma/celerity"
-	"github.com/5Sigma/celerity-examples-chat/models"
+	"github.com/5Sigma/celerity-example-chat/models"
 )
 
 // CreateUser creates a new user (POST /signup)
