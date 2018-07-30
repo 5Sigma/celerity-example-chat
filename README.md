@@ -9,3 +9,10 @@ This example includes:
 - Multiple independent chat rooms utilizing celerity's channel rooms
 - A ReactJS front end served from server
 - A ReactJS Context implementation to handle web socket communication
+
+
+# Running this example:
+
+1. Clone the repository with `git clone https://github.com/5Sigma/celerity-example-chat.git`
+2. Run the main server `go run main.go`
+3. Direct a browser to the application running at: http://localhost:5050/
