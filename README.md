@@ -13,7 +13,7 @@ This example includes:
 
 # Running this example:
 
-1. If you haven't, install Golang https://golang.org/doc/install
+1. If you haven't, install Go https://golang.org/doc/install
 2. Get the code using go get: `go get github.com/5Sigma/celerity-example-chat`
 3. CD to the project folder `cd $GOPATH/src/github.com/5Sigma/celerity-example-chat`
 4. Run the main server `go run main.go`
