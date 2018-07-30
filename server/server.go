@@ -24,6 +24,7 @@ type SocketEvent struct {
 func Setup() *celerity.Server {
 	db, _ := gorm.Open("sqlite3", "/tmp/data.sqlite3")
 	db.LogMode(true)
+
 	db.AutoMigrate(
 		models.User{},
 		models.Room{},
@@ -31,11 +32,16 @@ func Setup() *celerity.Server {
 		models.Session{},
 	)
 
-	db.Create(&models.Room{
-		Slug:  "lobby",
-		Name:  "The Lobby",
-		Topic: "Welcome to the lobby",
-	})
+	var lobbyCount int
+
+	db.Model(&models.Room{}).Where("slug = ?", "lobby").Count(&lobbyCount)
+	if lobbyCount == 0 {
+		db.Create(&models.Room{
+			Slug:  "lobby",
+			Name:  "The Lobby",
+			Topic: "Welcome to the lobby",
+		})
+	}
 
 	h := Handler{db}
 
