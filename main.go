@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/5Sigma/celerity-examples/chat/server"
+	"github.com/5Sigma/celerity-examples-chat/server"
 )
 
 func main() {

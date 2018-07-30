@@ -2,7 +2,7 @@ package server
 
 import (
 	"github.com/5Sigma/celerity"
-	"github.com/5Sigma/celerity-examples/chat/models"
+	"github.com/5Sigma/celerity-examples-chat/models"
 	"github.com/5Sigma/celerity/middleware"
 	"github.com/jinzhu/gorm"
 	//GORM SQLITE
